@@ -4,6 +4,8 @@
 
 #define PIN 2
 #define NUM_LEDS 48
+#define VOLUME  100
+#define TEMPO_DELAY  150
 
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUM_LEDS, PIN, NEO_GRB + NEO_KHZ800);
 M5UnitSynth synth;
@@ -32,40 +34,40 @@ void setup() {
 }
 
 void loop() {
-    synth.setNoteOn(9, 36, 127);
-    synth.setNoteOn(9, 42, 127);
+    synth.setNoteOn(9, 36, VOLUME);
+    synth.setNoteOn(9, 42, VOLUME);
     red();
-    delay(300);
+    delay(TEMPO_DELAY);
 
-    synth.setNoteOn(9, 42, 127);
+    synth.setNoteOn(9, 42, VOLUME);
     black();
-    delay(300);
+    delay(TEMPO_DELAY);
 
-    synth.setNoteOn(9, 38, 127);
-    synth.setNoteOn(9, 42, 127);
+    synth.setNoteOn(9, 38, VOLUME);
+    synth.setNoteOn(9, 42, VOLUME);
     red();
-    delay(300);
+    delay(TEMPO_DELAY);
 
-    synth.setNoteOn(9, 42, 127);
+    synth.setNoteOn(9, 42, VOLUME);
     black();
-    delay(300);
+    delay(TEMPO_DELAY);
 
-    synth.setNoteOn(9, 36, 127);
-    synth.setNoteOn(9, 42, 127);
+    synth.setNoteOn(9, 36, VOLUME);
+    synth.setNoteOn(9, 42, VOLUME);
     red();
-    delay(300);
+    delay(TEMPO_DELAY);
 
-    synth.setNoteOn(9, 36, 127);
-    synth.setNoteOn(9, 42, 127);
+    synth.setNoteOn(9, 36, VOLUME);
+    synth.setNoteOn(9, 42, VOLUME);
     black();
-    delay(300);
+    delay(TEMPO_DELAY);
 
-    synth.setNoteOn(9, 38, 127);
-    synth.setNoteOn(9, 42, 127);
+    synth.setNoteOn(9, 38, VOLUME);
+    synth.setNoteOn(9, 42, VOLUME);
     red();
-    delay(300);
+    delay(TEMPO_DELAY);
 
-    synth.setNoteOn(9, 42, 127);
+    synth.setNoteOn(9, 42, VOLUME);
     black();
-    delay(300);
+    delay(TEMPO_DELAY);
 }
